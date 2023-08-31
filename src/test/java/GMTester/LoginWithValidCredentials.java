@@ -1,12 +1,10 @@
-package GMTester.modul_4;
+package GMTester;
 
-import GMTester.common.BaseTest;
+import GMTester.BaseTest;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.options.AriaRole;
 import org.junit.jupiter.api.Test;
-
-import static com.microsoft.playwright.options.MouseButton.RIGHT;
 
 public class LoginWithValidCredentials extends BaseTest {
 
