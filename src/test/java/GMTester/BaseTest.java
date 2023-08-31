@@ -20,7 +20,7 @@ public class BaseTest {
     @BeforeAll
     static void beforeAll() {
         pw = Playwright.create();
-        browser = pw.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(1000));
+        browser = pw.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(1000).setTimeout(5000));
     }
 
     @BeforeEach
