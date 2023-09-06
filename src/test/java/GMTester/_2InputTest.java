@@ -3,7 +3,7 @@ package GMTester;
 import com.microsoft.playwright.Page;
 import org.junit.jupiter.api.Test;
 
-public class InputTest extends BaseTest {
+public class _2InputTest extends BaseTest {
 
     @Test
     void inputTest(){

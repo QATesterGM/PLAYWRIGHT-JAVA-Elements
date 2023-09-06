@@ -2,7 +2,7 @@ package GMTester;
 
 import org.junit.jupiter.api.Test;
 
-public class TextTest extends BaseTest {
+public class _3TextTest extends BaseTest {
 
     @Test
     void textTest() {
