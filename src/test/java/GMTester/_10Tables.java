@@ -28,8 +28,8 @@ public class _10Tables extends BaseTest {
 
         List<TableUser> users = trs.stream()
                 .map(tr -> {
-                    List<Locator> tds = tr.getByRole(AriaRole.CELL).all();// dla kazdej linijki wchodzimy do poszczegolnych komorek
-                    String lastName = tds.get(0).innerText();
+                    List<Locator> tds = tr.getByRole(AriaRole.CELL).all(); //tworzymy liste komórek
+                    String lastName = tds.get(0).innerText();// dla kazdej linijki wchodzimy do poszczegolnych komorek
                     String firstName = tds.get(1).innerText();
                     String email = tds.get(2).innerText();
                     String due = tds.get(3).innerText();
