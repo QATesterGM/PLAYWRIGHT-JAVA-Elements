@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class _10Tables extends BaseTest {
+public class _10TablesTest extends BaseTest {
 
     @Test
     void should_return_all_text_from_the_table() {
@@ -24,7 +24,7 @@ public class _10Tables extends BaseTest {
     @Test
     void should_return_list_of_users_from_the_table() {
         page.navigate("http://localhost:7080/tables");
-        List<Locator> trs = page.locator("table#table1 tbody tr").all(); //wyciągamy wszystkie linijki z tabeli
+        List<Locator> trs = page.locator("table#table1 tbody tr").all(); //tworzymy liste wszystkich linijek z tabeli
 
         List<TableUser> users = trs.stream()
                 .map(tr -> {
