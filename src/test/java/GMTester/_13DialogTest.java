@@ -48,9 +48,9 @@ public class _13DialogTest extends BaseTest {
 
         //HANDLER ZAWSZE PRZED KLIKNIĘCIEM
         page.onceDialog(dialog -> {
-            page.waitForTimeout(3000);
+            page.waitForTimeout(3000); // to do wywalenia oczywiscie
             dialog.accept("Cela jest super!!! <3<3<3 ;* ;* ;*  xD");
-            page.waitForTimeout(3000);
+            page.waitForTimeout(3000); // to do wywalenia oczywiscie
         });
 
         page.locator("text=Click for JS Prompt").click();
