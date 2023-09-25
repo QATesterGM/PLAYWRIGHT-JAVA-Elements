@@ -10,6 +10,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.nio.file.Paths;
+
 public class BaseTest {
 
     private static Playwright pw;
@@ -25,17 +27,24 @@ public class BaseTest {
 
     @BeforeEach
     void beforeEach() {
-        context = browser.newContext();
+        //  context = browser.newContext();
+
+        //NAGRYWANIE FILMOW Z TESTU
+        context = browser.newContext(new Browser.NewContextOptions()
+                .setViewportSize(1920, 1080)
+                .setRecordVideoDir(Paths.get("videos/"))
+                .setRecordVideoSize(1920,1080));
+
         page = context.newPage();
     }
 
     @AfterEach
-    void afterEach(){
+    void afterEach() {
         context.close();
     }
 
     @AfterAll
-    static void afterAll(){
+    static void afterAll() {
         pw.close();
     }
 
