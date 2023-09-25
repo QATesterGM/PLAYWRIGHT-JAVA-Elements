@@ -53,6 +53,7 @@ cmake-build-*/
 # IntelliJ
 out/
 videos/
+traces/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
