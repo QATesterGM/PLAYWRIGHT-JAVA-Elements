@@ -1,10 +1,6 @@
 package GMTester;
 
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserContext;
-import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -27,19 +23,26 @@ public class BaseTest {
 
     @BeforeEach
     void beforeEach() {
-        //  context = browser.newContext();
+        context = browser.newContext();
+
+        //USTAWIENIA TRACINGU
+        context.tracing().start(new Tracing.StartOptions()
+                .setScreenshots(true)
+                .setSnapshots(true)
+                .setSources(true));
 
         //NAGRYWANIE FILMOW Z TESTU
-        context = browser.newContext(new Browser.NewContextOptions()
-                .setViewportSize(1920, 1080)
-                .setRecordVideoDir(Paths.get("videos/"))
-                .setRecordVideoSize(1920,1080));
+//        context = browser.newContext(new Browser.NewContextOptions()
+//                .setViewportSize(1920, 1080)
+//                .setRecordVideoDir(Paths.get("videos/"))
+//                .setRecordVideoSize(1920,1080));
 
         page = context.newPage();
     }
 
     @AfterEach
     void afterEach() {
+        context.tracing().stop(new Tracing.StopOptions().setPath(Paths.get("traces/trace.zip"))); //zamykanie tracingu
         context.close();
     }
 
