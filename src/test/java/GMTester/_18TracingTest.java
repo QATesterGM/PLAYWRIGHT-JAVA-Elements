@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 
 public class _18TracingTest extends BaseTest {
 
+    // DOC - https://playwright.dev/java/docs/trace-viewer-intro
+    // TRACE - https://trace.playwright.dev/
+    // TERMINAL - mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="show-trace traces/trace.zip"
+
     @Test
     void tracingTest() {
         page.navigate("http://localhost:7080/");

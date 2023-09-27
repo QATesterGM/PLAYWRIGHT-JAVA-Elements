@@ -1,12 +1,13 @@
 package GMTester;
 
+import GMgajdalukasz.utils.StringUtils;
 import com.microsoft.playwright.*;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 
 import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class BaseTest {
 
@@ -41,10 +42,20 @@ public class BaseTest {
     }
 
     @AfterEach
-    void afterEach() {
-        context.tracing().stop(new Tracing.StopOptions().setPath(Paths.get("traces/trace.zip"))); //zamykanie tracingu
+    void afterEach(TestInfo testInfo) {
         context.close();
     }
+
+    //ZAPISYWANIE TRACEsow wraz z wskazaniem sciezki i nadaniu nazwy testu
+//    void afterEach(TestInfo testInfo) {
+//        String traceName = "traces/trace_"
+//                + StringUtils.removeRoundBrackets(testInfo.getDisplayName())
+//                + "_" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH_mm-ss")) + ".zip";
+//
+//
+//        context.tracing().stop(new Tracing.StopOptions().setPath(Paths.get(traceName))); //zamykanie tracingu
+//        context.close();
+//    }
 
     @AfterAll
     static void afterAll() {
