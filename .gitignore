@@ -54,6 +54,7 @@ cmake-build-*/
 out/
 videos/
 traces/
+storage/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/

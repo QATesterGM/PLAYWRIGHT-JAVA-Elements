@@ -1,14 +1,12 @@
-package GMTester.cwiczenie;
+package GMTesterPlaywrightActionsAndElements.cwiczenie;
 
-import GMTester.BaseTest;
+import GMTesterPlaywrightActionsAndElements.BaseTest;
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.options.AriaRole;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ShopTest extends BaseTest {
 

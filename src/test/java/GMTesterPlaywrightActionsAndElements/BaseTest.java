@@ -1,13 +1,7 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
-import GMgajdalukasz.utils.StringUtils;
 import com.microsoft.playwright.*;
 import org.junit.jupiter.api.*;
-
-import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class BaseTest {
 
@@ -25,6 +19,9 @@ public class BaseTest {
     @BeforeEach
     void beforeEach() {
         context = browser.newContext();
+
+//        //BASE AUTH
+//        context = browser.newContext(new Browser.NewContextOptions().setHttpCredentials("admin", "admin"));
 
         //USTAWIENIA TRACINGU
         context.tracing().start(new Tracing.StartOptions()

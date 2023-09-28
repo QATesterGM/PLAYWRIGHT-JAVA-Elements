@@ -1,7 +1,6 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.options.AriaRole;
 import org.junit.jupiter.api.Test;
 

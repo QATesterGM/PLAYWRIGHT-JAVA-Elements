@@ -1,8 +1,6 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
 import com.microsoft.playwright.Locator;
-import lombok.Getter;
-import lombok.ToString;
 
 public class TableUser {
 

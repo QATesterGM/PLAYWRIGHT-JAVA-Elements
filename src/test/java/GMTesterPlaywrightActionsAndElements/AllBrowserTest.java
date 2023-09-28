@@ -1,6 +1,5 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
-import GMTester.BaseTest;
 import com.microsoft.playwright.Page;
 import org.junit.jupiter.api.Test;
 import java.nio.file.Paths;

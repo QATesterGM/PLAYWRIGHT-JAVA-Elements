@@ -1,4 +1,4 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
 import com.microsoft.playwright.Download;
 import org.junit.jupiter.api.Test;

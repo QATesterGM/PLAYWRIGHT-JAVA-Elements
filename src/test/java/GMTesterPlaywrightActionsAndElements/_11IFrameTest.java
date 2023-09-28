@@ -1,6 +1,5 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,5 @@
-package GMTester.cwiczenie;
+package GMTesterPlaywrightActionsAndElements.cwiczenie;
 
-import com.microsoft.playwright.Locator;
 import lombok.Getter;
 import lombok.ToString;
 

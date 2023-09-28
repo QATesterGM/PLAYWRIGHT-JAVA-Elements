@@ -1,4 +1,4 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;

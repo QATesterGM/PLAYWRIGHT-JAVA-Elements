@@ -1,4 +1,4 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;

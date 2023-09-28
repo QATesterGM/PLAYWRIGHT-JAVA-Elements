@@ -1,6 +1,5 @@
-package GMTester;
+package GMTesterPlaywrightActionsAndElements;
 
-import GMTester.BaseTest;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
