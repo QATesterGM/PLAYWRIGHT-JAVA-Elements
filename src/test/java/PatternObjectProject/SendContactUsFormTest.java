@@ -3,8 +3,6 @@ package PatternObjectProject;
 import GMTesterPlaywrightActionsAndElements.BaseTest;
 import PatternObjectProject.pages.ContactUsPage;
 import PatternObjectProject.pages.HomePage;
-import com.microsoft.playwright.Playwright;
-import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

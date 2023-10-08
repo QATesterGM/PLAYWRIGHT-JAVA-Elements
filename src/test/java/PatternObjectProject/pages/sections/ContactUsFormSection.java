@@ -69,13 +69,5 @@ public class ContactUsFormSection extends BasePage {
         return confirmationMessage;
     }
 
-    public ContactUsFormSection sendContactUsForm() {
-        selectSubjectHeading("Webmaster")
-                .enterEmailAddress("demo@demo.com")
-                .enterOrderReference("123456")
-                .selectFileToUpload("screenshots/Premier.jpg")
-                .enterMessage("Ostatnowio wszystko przeciwko mnie, wszystkie kary na mnie idą")
-                .clickOnSendMessageButton();
-        return this;
-    }
+
 }
