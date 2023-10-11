@@ -61,17 +61,9 @@ public class CreateAccountFormSection extends BasePage {
         return this;
     }
 
-    private CreateAccountFormSection setDayOfBirth(String dayOfBirth) {
+    private CreateAccountFormSection setDateOfBirth (String dayOfBirth, String monthOfBirth, String yearOfBirth) {
         dateOfBirthDDSelecet.selectOption(dayOfBirth);
-        return this;
-    }
-
-    private CreateAccountFormSection setMonthOfBirth(String monthOfBirth) {
         dateOfBirthMMSelecet.selectOption(monthOfBirth);
-        return this;
-    }
-
-    private CreateAccountFormSection setYearOfBirth(String yearOfBirth) {
         dateOfBirthYYYYSelecet.selectOption(yearOfBirth);
         return this;
     }
@@ -87,9 +79,9 @@ public class CreateAccountFormSection extends BasePage {
                 .fillLastName(CreateAccountDTO.getDefaultCreateAccount().getLastName())
                 .fillAddressMail(CreateAccountDTO.getDefaultCreateAccount().getMail())
                 .fillPassword(CreateAccountDTO.getDefaultCreateAccount().getPassword())
-                .setDayOfBirth(CreateAccountDTO.getDefaultCreateAccount().getDayOfBirth())
-                .setMonthOfBirth(CreateAccountDTO.getDefaultCreateAccount().getMonthOfBirth())
-                .setYearOfBirth(CreateAccountDTO.getDefaultCreateAccount().getYearOfBirth())
+                .setDateOfBirth(CreateAccountDTO.getDefaultCreateAccount().getDayOfBirth(),
+                        CreateAccountDTO.getDefaultCreateAccount().getMonthOfBirth(),
+                        CreateAccountDTO.getDefaultCreateAccount().getYearOfBirth())
                 .clickOnRegisterButton();
         return this;
     }
