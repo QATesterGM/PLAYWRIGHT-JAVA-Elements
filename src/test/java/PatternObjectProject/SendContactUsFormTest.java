@@ -1,6 +1,7 @@
 package PatternObjectProject;
 
 import GMTesterPlaywrightActionsAndElements.BaseTest;
+import PatternObjectProject.dto.ContactUsDTO;
 import PatternObjectProject.pages.ContactUsPage;
 import PatternObjectProject.pages.HomePage;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,9 +29,7 @@ public class SendContactUsFormTest extends BaseTest {
     @Test
     void should_fill_and_send_contact_us_form_test() {
         ContactUsPage contactUsPage = homePage.getTopMenuSection().clickOnContactUsLink();
-
-        contactUsPage.getContactUsFormSection().sendContactUsForm();
-
+        contactUsPage.getContactUsFormSection().sendContactUsForm(ContactUsDTO.getDefaultContactUsDTO());
         assertThat(contactUsPage.getContactUsFormSection().getConfirmationMessage()).isVisible();
 
     }

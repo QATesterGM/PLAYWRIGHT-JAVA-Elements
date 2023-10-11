@@ -1,7 +1,6 @@
 package PatternObjectProject.pages;
 
 import PatternObjectProject.pages.sections.ContactUsFormSection;
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import lombok.Getter;
 

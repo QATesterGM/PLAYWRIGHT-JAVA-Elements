@@ -1,5 +1,6 @@
 package PatternObjectProject.pages.sections;
 
+import PatternObjectProject.dto.ContactUsDTO;
 import PatternObjectProject.pages.BasePage;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
@@ -61,13 +62,17 @@ public class ContactUsFormSection extends BasePage {
         return this;
     }
 
-    public Locator getErrorMessage() {
-        return errorMessage;
-    }
-
     public Locator getConfirmationMessage() {
         return confirmationMessage;
     }
 
-
+    public ContactUsFormSection sendContactUsForm(ContactUsDTO contactUsDTO) {
+        selectSubjectHeading(contactUsDTO.getSubjectHeading())
+                .enterEmailAddress(contactUsDTO.getEmailAddress())
+                .enterOrderReference(contactUsDTO.getOrderReference())
+                .selectFileToUpload(contactUsDTO.getFileUploadInput())
+                .enterMessage(contactUsDTO.getMessage())
+                .clickOnSendMessageButton();
+        return this;
+    }
 }
