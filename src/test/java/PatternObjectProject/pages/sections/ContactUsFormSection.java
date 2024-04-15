@@ -11,14 +11,14 @@ import java.nio.file.Paths;
 @Getter
 public class ContactUsFormSection extends BasePage {
 
-    private Locator errorMessage;
-    private Locator sendMessageButton;
-    private Locator subjectHeading;
-    private Locator emailAddressInput;
-    private Locator orderReferenceInput;
-    private Locator fileUploadInput;
-    private Locator messageText;
-    private Locator confirmationMessage;
+    private final Locator errorMessage;
+    private final Locator sendMessageButton;
+    private final Locator subjectHeading;
+    private final Locator emailAddressInput;
+    private final Locator orderReferenceInput;
+    private final Locator fileUploadInput;
+    private final Locator messageText;
+    private final Locator confirmationMessage;
 
     public ContactUsFormSection(Page page) {
         super(page);
@@ -60,10 +60,6 @@ public class ContactUsFormSection extends BasePage {
     private ContactUsFormSection enterMessage(String message) {
         messageText.fill(message);
         return this;
-    }
-
-    public Locator getConfirmationMessage() {
-        return confirmationMessage;
     }
 
     public ContactUsFormSection sendContactUsForm(ContactUsDTO contactUsDTO) {

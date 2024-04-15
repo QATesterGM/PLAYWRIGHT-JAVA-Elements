@@ -2,7 +2,7 @@ package GMTesterPlaywrightActionsAndElements;
 
 import org.junit.jupiter.api.Test;
 
-public class _12ShadowDOMTest extends BaseTest {
+class _12ShadowDOMTest extends BaseTest {
 
     @Test
     void shadowDOMTest() {

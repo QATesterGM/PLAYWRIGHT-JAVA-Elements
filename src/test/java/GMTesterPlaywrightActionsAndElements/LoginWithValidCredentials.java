@@ -13,8 +13,8 @@ public class LoginWithValidCredentials extends BaseTest {
         page.navigate("http://localhost:7080/login");
         page.fill("#username", "tomsmith"); //# oznacza "id="
         page.fill("id=password", "SuperSecretPassword!");
-        page.click("text=Login");
-        //page.locator("text=Login").last().click(); // wielkosc liter nie brana pod uwage
+        //page.click("text=Login");
+        page.locator("text=Login").last().click(); // wielkosc liter nie brana pod uwage
         //page.locator("'Login'").last().click(); // ten sam zapis co na gorze (wielkosc liter brana pod uwage)
         PlaywrightAssertions.assertThat(page.locator("id=flash")).containsText("You logged into a secure area!");
         PlaywrightAssertions.assertThat(page.locator("text=You logged into a secure area!")).isVisible();

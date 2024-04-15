@@ -3,8 +3,8 @@ package GMTesterPlaywrightActionsAndElements.cwiczenie;
 import lombok.Getter;
 import lombok.ToString;
 
-@ToString
 @Getter
+@ToString
 public class ProductShop {
 
     private String productName;
@@ -15,16 +15,8 @@ public class ProductShop {
         this.productPrice = productPrice;
     }
 
-    public String getProductName() {
-        return productName;
-    }
-
     public void setProductName(String productName) {
         this.productName = productName;
-    }
-
-    public int getProductPrice() {
-        return productPrice;
     }
 
     public void setProductPrice(int productPrice) {

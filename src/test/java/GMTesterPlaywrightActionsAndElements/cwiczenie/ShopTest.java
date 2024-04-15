@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShopTest extends BaseTest {
+class ShopTest extends BaseTest {
 
     @Test
     void check_price_not_above_15$() {
@@ -41,7 +41,7 @@ public class ShopTest extends BaseTest {
 
         productLocators.forEach(p -> {
             String productName = p.locator(".right-block .product-name").innerText();
-            Integer productPrice = Integer.valueOf(p.locator(".right-block .content_price .price").innerText().replace("$", ""));
+            int productPrice = Integer.parseInt(p.locator(".right-block .content_price .price").innerText().replace("$", ""));
 
             products.add(new ProductShop(productName, productPrice));
         });
